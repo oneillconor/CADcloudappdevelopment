@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  director: MyString
+  releaseyear: 1
+  genere: MyString
+  stock: 1
+
+two:
+  title: MyString
+  director: MyString
+  releaseyear: 1
+  genere: MyString
+  stock: 1

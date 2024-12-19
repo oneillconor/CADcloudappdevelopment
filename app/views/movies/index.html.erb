@@ -1,0 +1,41 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Movies" %>
+
+<h1 style="text-align:center;">Movies</h1>
+<%= search_form_for @q do |f| %>
+  <div class="d-flex justify-content-center">
+  
+    <div>
+    <%= f.search_field :title_or_director_or_genere_or_releaseyear_cont, 
+          placeholder: "Search movies by title, director, genere, or release year" %>
+    <%= f.submit "Search" %>
+    </div>
+  </div>
+<br>
+<% end %>
+
+
+<div id="movies">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+      <% @movies.each do |movie| %>
+        <div class="col mb-4">
+          <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body">
+              <h5 class="card-title"><%= movie.title %></h5>
+              <%= render movie %>
+              <a href="/movies/<%=movie.id%>" class="btn btn-outline-primary btn-sm">
+                Show this movie
+              </a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to "Create New movie", new_movie_path %>
+    </div>
+  </div>
+</div>
+
+
