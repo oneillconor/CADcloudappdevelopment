@@ -79,12 +79,12 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Set executable
+        run: chmod +x bin/rails
       - name: Run tests
         env:
           RAILS_ENV: test
           # REDIS_URL: redis://localhost:6379/0
-      - name: Set executable
-        run: chmod +x bin/rails
         run: bin/rails db:test:prepare test test:system
 
       - name: Keep screenshots from failed system tests
