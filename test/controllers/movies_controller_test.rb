@@ -14,11 +14,6 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
     get movies_url+"?q%5Btitle_or_director_or_genere_or_releaseyear_cont%5D=comedy&commit=Search"
     assert_response :success
   end
-  
-  test "search and find with ransack" do
-    get movies_url+"?q%5Btitle_or_director_or_genere_or_releaseyear_cont%5D=comedy&commit=Search"
-    assert_response :success
-  end
 
   test "should get new" do
     get new_movie_url
