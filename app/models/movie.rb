@@ -1,5 +1,4 @@
 class Movie < ApplicationRecord
-
     validates :genere, presence: true
     validates :releaseyear, presence: true
     validates :title, presence: true
@@ -10,8 +9,6 @@ class Movie < ApplicationRecord
         %w[title director genere releaseyear]
     end
     def self.ransackable_associations(_auth_object = nil)
-        ['stock'] 
+        [ "stock" ]
     end
-
-
 end
