@@ -13,3 +13,24 @@ two:
   releaseyear: 1
   genere: MyString
   stock: 1
+
+three:
+  title: Ghostbusters
+  director: Ivan Reitman
+  releaseyear: 1984
+  genere: Comedy
+  stock: 14
+
+four:
+  title: Ghostbusters II
+  director: Ivan Reitman
+  releaseyear: 1989
+  genere: Comedy
+  stock: 8
+
+five:
+  title: The Raid
+  director: Gareth Evans
+  releaseyear: 2011
+  genere: Action
+  stock: 6
